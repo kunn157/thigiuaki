@@ -1,0 +1,27 @@
+<%= form_with(model: tl_sach) do |form| %>
+  <% if tl_sach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tl_sach.errors.count, "error") %> prohibited this tl_sach from being saved:</h2>
+
+      <ul>
+        <% tl_sach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :matheloai %>
+    <%= form.text_field :matheloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tentheloai %>
+    <%= form.text_field :tentheloai %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

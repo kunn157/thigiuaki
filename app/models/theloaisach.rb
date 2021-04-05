@@ -1,0 +1,2 @@
+class Theloaisach < ApplicationRecord
+end

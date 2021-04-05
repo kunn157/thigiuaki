@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ma_nxb: MyString
+  ten_nxb: MyString
+  diachi: MyString
+  email: MyString
+  thongtin: MyString
+
+two:
+  ma_nxb: MyString
+  ten_nxb: MyString
+  diachi: MyString
+  email: MyString
+  thongtin: MyString

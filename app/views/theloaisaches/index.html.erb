@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Theloaisach</h1>
+ <%= link_to "DanhMuc","/sach23s"  %>
+ <%= link_to "Tacgia","/tacgia"  %>
+ <%= link_to "Loaisach","/tl_saches"  %>
+ <%= link_to "NhaXuatBan","/nhaxuatbans"  %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ma sach</th>
+      <th>Ten sach</th>
+      <th>Mtg</th>
+      <th>Mtl</th>
+      <th>Manxb</th>
+      <th>Nxb</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @theloaisaches.each do |theloaisach| %>
+      <tr>
+        <td><%= theloaisach.ma_sach %></td>
+        <td><%= theloaisach.ten_sach %></td>
+        <td><%= theloaisach.mtg %></td>
+        <td><%= theloaisach.mtl %></td>
+        <td><%= theloaisach.maNXB %></td>
+        <td><%= theloaisach.nxb %></td>
+        <td><%= link_to 'Show', theloaisach %></td>
+        <td><%= link_to 'Edit', edit_theloaisach_path(theloaisach) %></td>
+        <td><%= link_to 'Destroy', theloaisach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Theloaisach', new_theloaisach_path %>

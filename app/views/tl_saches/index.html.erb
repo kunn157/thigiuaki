@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tl Saches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matheloai</th>
+      <th>Tentheloai</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tl_saches.each do |tl_sach| %>
+      <tr>
+        <td><%= tl_sach.matheloai %></td>
+        <td><%= tl_sach.tentheloai %></td>
+        <td><%= link_to 'Show', tl_sach %></td>
+        <td><%= link_to 'Edit', edit_tl_sach_path(tl_sach) %></td>
+        <td><%= link_to 'Destroy', tl_sach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tl Sach', new_tl_sach_path %>

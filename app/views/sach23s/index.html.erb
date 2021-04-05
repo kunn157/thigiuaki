@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sach23s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ma tacgia</th>
+      <th>Ten tacgia</th>
+      <th>Website</th>
+      <th>Ghichu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sach23s.each do |sach23| %>
+      <tr>
+        <td><%= sach23.ma_tacgia %></td>
+        <td><%= sach23.ten_tacgia %></td>
+        <td><%= sach23.website %></td>
+        <td><%= sach23.ghichu %></td>
+        <td><%= link_to 'Show', sach23 %></td>
+        <td><%= link_to 'Edit', edit_sach23_path(sach23) %></td>
+        <td><%= link_to 'Destroy', sach23, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sach23', new_sach23_path %>

@@ -1,0 +1,2 @@
+class Tacgium < ApplicationRecord
+end

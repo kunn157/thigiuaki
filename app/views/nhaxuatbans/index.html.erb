@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nhaxuatbans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ma nxb</th>
+      <th>Ten nxb</th>
+      <th>Diachi</th>
+      <th>Email</th>
+      <th>Thongtin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nhaxuatbans.each do |nhaxuatban| %>
+      <tr>
+        <td><%= nhaxuatban.ma_nxb %></td>
+        <td><%= nhaxuatban.ten_nxb %></td>
+        <td><%= nhaxuatban.diachi %></td>
+        <td><%= nhaxuatban.email %></td>
+        <td><%= nhaxuatban.thongtin %></td>
+        <td><%= link_to 'Show', nhaxuatban %></td>
+        <td><%= link_to 'Edit', edit_nhaxuatban_path(nhaxuatban) %></td>
+        <td><%= link_to 'Destroy', nhaxuatban, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nhaxuatban', new_nhaxuatban_path %>
